@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <img className='logo' src="/src/assets/797-counter.svg" alt="counter" />
+      <img className='logo' src="./src/assets/797-counter.svg" alt="counter" />
       <h2>Counter: {counter}</h2>
       <button onClick={() => incrementCounterHandler(setCounter)}>Increment➕</button>
       <button onClick={() => resetCounterHandler(setCounter)}>Reset0️⃣</button>

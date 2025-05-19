@@ -3,6 +3,7 @@ import './App.css'
 import { incrementCounterHandler } from './handlers/increment'
 import { decrementCounterHandler } from './handlers/decrement'
 import { resetCounterHandler } from './handlers/reset'
+import Button from './components/Button'
 import CounterLogo from './assets/797-counter.svg'
 
 function App() {
@@ -10,13 +11,27 @@ function App() {
 
   return (
     <div>
-
       <img className='logo' src={CounterLogo} alt="counter" />
       <h2>Counter: {counter}</h2>
-      <button onClick={() => incrementCounterHandler(setCounter)}>Increment➕</button>
-      <button onClick={() => resetCounterHandler(setCounter)}>Reset0️⃣</button>
-      <button onClick={() => decrementCounterHandler(setCounter)}>Decrement➖</button>
+      <div className="button-group">
+        <Button
+          title="Increment"
+          emoji="➕"
+          onClick={() => incrementCounterHandler(setCounter)}
+        />
+        <Button
+          title="Reset"
+          emoji="0️⃣"
+          onClick={() => resetCounterHandler(setCounter)}
+        />
+        <Button
+          title="Decrement"
+          emoji="➖"
+          onClick={() => decrementCounterHandler(setCounter)}
+        />
+      </div>
     </div>
+    
   );
 };
 

@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div>
+
       <img className='logo' src={CounterLogo} alt="counter" />
       <h2>Counter: {counter}</h2>
       <button onClick={() => incrementCounterHandler(setCounter)}>Increment➕</button>
